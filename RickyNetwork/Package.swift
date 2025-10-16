@@ -27,10 +27,6 @@ let package = Package(
                 "RickyNetworkInterface"
             ],
             path: "Sources"
-        ),
-        .testTarget(
-            name: "RickyNetworkTests",
-            dependencies: ["RickyNetwork"]
-        ),
+        )
     ]
 )

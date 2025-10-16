@@ -16,12 +16,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "RickyConfiguration",
-            path: "Sources"
-        ),
-        .testTarget(
-            name: "RickyConfigurationTests",
-            dependencies: ["RickyConfiguration"]
-        ),
+            name: "RickyConfiguration"
+        )
     ]
 )

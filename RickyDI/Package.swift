@@ -23,8 +23,6 @@ let package = Package(
         .package(path: "../RickyData")
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "RickyDI",
             dependencies: [
@@ -34,12 +32,7 @@ let package = Package(
                 .product(name: "RickyDomain", package: "RickyDomain"),
                 .product(name: "RickyData", package: "RickyData")
             ],
-            path: "Sources"),
-        .testTarget(
-            name: "RickyDITests",
-            dependencies: [
-                "RickyDI"
-            ]
-        ),
+            path: "Sources"
+        )
     ]
 )

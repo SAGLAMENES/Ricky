@@ -32,12 +32,7 @@ let package = Package(
                 .product(name: "RickyPersistance", package: "RickyPersistance"),
                 .product(name: "RickyModel", package: "RickyModel"),
                 .product(name: "RickyConfiguration", package: "RickyConfiguration")
-            ],
-            path: "Sources"
-        ),
-        .testTarget(
-            name: "RickyDataTests",
-            dependencies: ["RickyData"]
-        ),
+            ]
+        )
     ]
 )

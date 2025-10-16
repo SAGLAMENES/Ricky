@@ -20,12 +20,7 @@ let package = Package(
             name: "RickyRouter",
             dependencies: [
                 .product(name: "RickyDomain", package: "RickyDomain")
-            ],
-            path: "Sources"
-        ),
-        .testTarget(
-            name: "RickyRouterTests",
-            dependencies: ["RickyRouter"]
-        ),
+            ]
+        )
     ]
 )

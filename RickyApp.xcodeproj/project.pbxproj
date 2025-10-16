@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B4BDF2B5F18A433EAED184D8 /* RickyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4605D2B2829543F3B576CBB7 /* RickyAppApp.swift */; };
-		3AD24675B04A4991A795DF7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8368A7F3C74F89B90EC4B4 /* ContentView.swift */; };
-		AF0FAF08A43D45C5B8415E75 /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FE9856B3E94CAABF4FDDD6 /* CharacterListViewModel.swift */; };
-		0227A09AE7BF46D3A216D45D /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A193C4CD3474B8489F57BCF /* LocationListViewModel.swift */; };
-		0D0261AEFE114C12B02BFD65 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A3280E25D84826BE5DA8EE /* CharacterListView.swift */; };
-		7B22507101C84456A9F54E5E /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A268169EF94084B9051E7A /* CharacterDetailView.swift */; };
-		9B53FB473C094CFCA8291C2F /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF484F27CBB4F3289530C28 /* LocationListView.swift */; };
-		463FB50A2D5E4A019EE02B5E /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8D39581413246F19D1AC63C /* LocationDetailView.swift */; };
-		C4709C9B01C646A6B7266F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D85623BA9A468DA50F80CB /* Assets.xcassets */; };
-		C095464CFCBB44B4BA6F41B5 /* RickyDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = FD89B42DE54745379963594A /* RickyDesignSystem */; };
-		CDA58227BA764794B0D35B83 /* RickyDomain in Frameworks */ = {isa = PBXBuildFile; productRef = B02D665400724FECBAB355F6 /* RickyDomain */; };
-		2137DFC0AA3D4818BC25F19D /* RickyData in Frameworks */ = {isa = PBXBuildFile; productRef = FAE4C9EDC54A42D482C554EC /* RickyData */; };
-		1D761C26B7EC40DA850F5623 /* RickyRouter in Frameworks */ = {isa = PBXBuildFile; productRef = C9B962C1367D4984BE3D2E42 /* RickyRouter */; };
-		5BE19E94F3AF433D9EA4B718 /* RickyDI in Frameworks */ = {isa = PBXBuildFile; productRef = 65594797D1CB4AB6A614A052 /* RickyDI */; };
-		ECE21451289C4F219D7C3111 /* RickyAppCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6F2D540633DC4BC3A4AF603F /* RickyAppCore */; };
-		E211DD7144044212A9FAD141 /* RickyConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = C8FFC43A91544E4B9727F24E /* RickyConfiguration */; };
+		B59AFA9AA8FB4725A3690296 /* RickyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F54D70EA34B36B4D79449 /* RickyAppApp.swift */; };
+		A727B895FF0B488FAB32F7B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9933D0244A8FBC8A083B /* ContentView.swift */; };
+		05FF9B9007B444B8A4D2A93B /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */; };
+		6148D6E9AE5E472D8F8B250F /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */; };
+		CAE7B59E376C4DD0B3D5C83F /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1368F7B1724717866438D8 /* CharacterListView.swift */; };
+		E07635ED98E04F0A89693234 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */; };
+		7B36880850AE43A0B0C89D64 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */; };
+		BEB8E81491584AD697E1B01C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CBBF0192AC4D198D30463F /* LocationDetailView.swift */; };
+		DEFD19A3BB7947C7BE918AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF6063A8E91471AA5F1730D /* Assets.xcassets */; };
+		5455258386034D8BB80BAFD8 /* RickyDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */; };
+		EE786026506941E595CF7DFD /* RickyDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8857BFE00ECA47F38B646DEF /* RickyDomain */; };
+		781C3D9E257746BB937422D0 /* RickyData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6AD91F68514138B6DD8EA3 /* RickyData */; };
+		25EEF86336884259822677BC /* RickyRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 6A1F2E4D59074669B52A7939 /* RickyRouter */; };
+		91DCEC753A464E40A002E378 /* RickyDI in Frameworks */ = {isa = PBXBuildFile; productRef = E435CC9D2CDA49C2B2EFC623 /* RickyDI */; };
+		D3F218B5063848E99B36E849 /* RickyAppCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF61157C62C8476495FE08CE /* RickyAppCore */; };
+		897393826C854A0DAB4117E0 /* RickyConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = C047B539EF66429DA331C59F /* RickyConfiguration */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A2407EEF36B4827A4DDFB97 /* RickyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4605D2B2829543F3B576CBB7 /* RickyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickyAppApp.swift; sourceTree = "<group>"; };
-		2E8368A7F3C74F89B90EC4B4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		47FE9856B3E94CAABF4FDDD6 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
-		5A193C4CD3474B8489F57BCF /* LocationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
-		55A3280E25D84826BE5DA8EE /* CharacterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
-		E8A268169EF94084B9051E7A /* CharacterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
-		FCF484F27CBB4F3289530C28 /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
-		D8D39581413246F19D1AC63C /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
-		86D85623BA9A468DA50F80CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6FA9719430844326AFBF3E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FEE385AA979746CDAED8D73E /* RickyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyApp.entitlements; sourceTree = "<group>"; };
+		97E2C035D69F46EBBFBDCB8E /* RickyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		309F54D70EA34B36B4D79449 /* RickyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickyAppApp.swift; sourceTree = "<group>"; };
+		01FC9933D0244A8FBC8A083B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		9B1368F7B1724717866438D8 /* CharacterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		69CBBF0192AC4D198D30463F /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		0BF6063A8E91471AA5F1730D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CFE54E955CC4F7F8030C5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C23C05E39DEA4BF98131820E /* RickyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B4298576AA07423A9B4C441D /* Frameworks */ = {
+		440E16AA279F45DC8B7FFBE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,45 +51,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		325F944A637846A9B916A8C1 = {
+		F392CC54449A4093B4791A1C = {
 			isa = PBXGroup;
 			children = (
-				4605D2B2829543F3B576CBB7 /* RickyAppApp.swift */,
-				2E8368A7F3C74F89B90EC4B4 /* ContentView.swift */,
-				581EE1AB791F455CA1E91964 /* VM */,
-				2589E16383324989B9537FCA /* View */,
-				86D85623BA9A468DA50F80CB /* Assets.xcassets */,
-				FEE385AA979746CDAED8D73E /* RickyApp.entitlements */,
-				6FA9719430844326AFBF3E4F /* Info.plist */,
-				D7715796E6774C93BAFCEFEE /* Products */,
+				309F54D70EA34B36B4D79449 /* RickyAppApp.swift */,
+				01FC9933D0244A8FBC8A083B /* ContentView.swift */,
+				5746371000724B13AC74C9EA /* VM */,
+				F65966DB79A047299AD364D9 /* View */,
+				0BF6063A8E91471AA5F1730D /* Assets.xcassets */,
+				C23C05E39DEA4BF98131820E /* RickyApp.entitlements */,
+				6CFE54E955CC4F7F8030C5FD /* Info.plist */,
+				E9580046487548B6B01DF2A7 /* Products */,
 			);
 			path = RickyApp/RickyApp;
 			sourceTree = "<group>";
 		};
-		D7715796E6774C93BAFCEFEE /* Products */ = {
+		E9580046487548B6B01DF2A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A2407EEF36B4827A4DDFB97 /* RickyApp.app */,
+				97E2C035D69F46EBBFBDCB8E /* RickyApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		581EE1AB791F455CA1E91964 /* VM */ = {
+		5746371000724B13AC74C9EA /* VM */ = {
 			isa = PBXGroup;
 			children = (
-				47FE9856B3E94CAABF4FDDD6 /* CharacterListViewModel.swift */,
-				5A193C4CD3474B8489F57BCF /* LocationListViewModel.swift */,
+				464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */,
+				B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
 		};
-		2589E16383324989B9537FCA /* View */ = {
+		F65966DB79A047299AD364D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				55A3280E25D84826BE5DA8EE /* CharacterListView.swift */,
-				E8A268169EF94084B9051E7A /* CharacterDetailView.swift */,
-				FCF484F27CBB4F3289530C28 /* LocationListView.swift */,
-				D8D39581413246F19D1AC63C /* LocationDetailView.swift */,
+				9B1368F7B1724717866438D8 /* CharacterListView.swift */,
+				00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */,
+				A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */,
+				69CBBF0192AC4D198D30463F /* LocationDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,13 +97,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40139FD0963D4E3089BC5EFE /* RickyApp */ = {
+		6D1A9CF8FB7A4D3984F3F4FC /* RickyApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C2574EC81B04814AFA1F89F /* Build configuration list for PBXNativeTarget "RickyApp" */;
+			buildConfigurationList = F0617BACFD3A4254A5FD1BE2 /* Build configuration list for PBXNativeTarget "RickyApp" */;
 			buildPhases = (
-				8BB97D6592F542BCB5FE6888 /* Sources */,
-				B4298576AA07423A9B4C441D /* Frameworks */,
-				584B23B6928046999BB05C99 /* Resources */,
+				AD287FA1FE984ABFBEBE64E2 /* Sources */,
+				440E16AA279F45DC8B7FFBE9 /* Frameworks */,
+				B18D05AF9B5840B5BAC0CA4E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -111,29 +111,29 @@
 			);
 			name = RickyApp;
 			packageProductDependencies = (
-				FD89B42DE54745379963594A /* RickyDesignSystem */,
-				B02D665400724FECBAB355F6 /* RickyDomain */,
-				FAE4C9EDC54A42D482C554EC /* RickyData */,
-				C9B962C1367D4984BE3D2E42 /* RickyRouter */,
-				65594797D1CB4AB6A614A052 /* RickyDI */,
-				6F2D540633DC4BC3A4AF603F /* RickyAppCore */,
-				C8FFC43A91544E4B9727F24E /* RickyConfiguration */,
+				F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */,
+				8857BFE00ECA47F38B646DEF /* RickyDomain */,
+				8B6AD91F68514138B6DD8EA3 /* RickyData */,
+				6A1F2E4D59074669B52A7939 /* RickyRouter */,
+				E435CC9D2CDA49C2B2EFC623 /* RickyDI */,
+				CF61157C62C8476495FE08CE /* RickyAppCore */,
+				C047B539EF66429DA331C59F /* RickyConfiguration */,
 			);
 			productName = RickyApp;
-			productReference = 0A2407EEF36B4827A4DDFB97 /* RickyApp.app */;
+			productReference = 97E2C035D69F46EBBFBDCB8E /* RickyApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95EBE3C9E4CD4DF4B4769BFD /* Project object */ = {
+		0EDD4C924A13426E99B1F617 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
 			};
-			buildConfigurationList = 72D19E015316468D8D6640FB /* Build configuration list for PBXProject "RickyApp" */;
+			buildConfigurationList = 4C255F45FD204836A8884BF2 /* Build configuration list for PBXProject "RickyApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,56 +141,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 325F944A637846A9B916A8C1;
+			mainGroup = F392CC54449A4093B4791A1C;
 			packageReferences = (
-				DFD6EED5A308406BB6CDB1B0 /* XCLocalSwiftPackageReference "RickyDesignSystem" */,
-				0ACD3FAE351D4D6F80B2313B /* XCLocalSwiftPackageReference "RickyDomain" */,
-				DCCA6056C8764C589F51680B /* XCLocalSwiftPackageReference "RickyData" */,
-				690FB03D9C7F44418AAA590A /* XCLocalSwiftPackageReference "RickyRouter" */,
-				F0E3898275C84B5C96933A9C /* XCLocalSwiftPackageReference "RickyDI" */,
-				693C5A44163E4D4AB58D4FD2 /* XCLocalSwiftPackageReference "RickyAppCore" */,
-				F05C92733A994B1394D9A6F9 /* XCLocalSwiftPackageReference "RickyConfiguration" */,
+				675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */,
+				519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */,
+				1DD9F14D52B84AB2B664793D /* XCLocalSwiftPackageReference "RickyData" */,
+				FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */,
+				2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */,
+				40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */,
+				2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */,
 			);
-			productRefGroup = D7715796E6774C93BAFCEFEE /* Products */;
+			productRefGroup = E9580046487548B6B01DF2A7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				40139FD0963D4E3089BC5EFE /* RickyApp */,
+				6D1A9CF8FB7A4D3984F3F4FC /* RickyApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		584B23B6928046999BB05C99 /* Resources */ = {
+		B18D05AF9B5840B5BAC0CA4E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4709C9B01C646A6B7266F77 /* Assets.xcassets in Resources */,
+				DEFD19A3BB7947C7BE918AAE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8BB97D6592F542BCB5FE6888 /* Sources */ = {
+		AD287FA1FE984ABFBEBE64E2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4BDF2B5F18A433EAED184D8 /* RickyAppApp.swift in Sources */,
-				3AD24675B04A4991A795DF7C /* ContentView.swift in Sources */,
-				AF0FAF08A43D45C5B8415E75 /* CharacterListViewModel.swift in Sources */,
-				0227A09AE7BF46D3A216D45D /* LocationListViewModel.swift in Sources */,
-				0D0261AEFE114C12B02BFD65 /* CharacterListView.swift in Sources */,
-				7B22507101C84456A9F54E5E /* CharacterDetailView.swift in Sources */,
-				9B53FB473C094CFCA8291C2F /* LocationListView.swift in Sources */,
-				463FB50A2D5E4A019EE02B5E /* LocationDetailView.swift in Sources */,
+				B59AFA9AA8FB4725A3690296 /* RickyAppApp.swift in Sources */,
+				A727B895FF0B488FAB32F7B5 /* ContentView.swift in Sources */,
+				05FF9B9007B444B8A4D2A93B /* CharacterListViewModel.swift in Sources */,
+				6148D6E9AE5E472D8F8B250F /* LocationListViewModel.swift in Sources */,
+				CAE7B59E376C4DD0B3D5C83F /* CharacterListView.swift in Sources */,
+				E07635ED98E04F0A89693234 /* CharacterDetailView.swift in Sources */,
+				7B36880850AE43A0B0C89D64 /* LocationListView.swift in Sources */,
+				BEB8E81491584AD697E1B01C /* LocationDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		642BC43CB0A847A7BCDEFA9B /* Debug */ = {
+		EDA8209BB70A44048543E85F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -251,7 +251,7 @@
 			};
 			name = Debug;
 		};
-		456F434E1B66412BA7C1F82B /* Release */ = {
+		166E11E1E32843309CFE9D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -304,7 +304,7 @@
 			};
 			name = Release;
 		};
-		C02AACEAB4A8499995A0AC8E /* Debug */ = {
+		58332397B63941829558F3BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -335,7 +335,7 @@
 			};
 			name = Debug;
 		};
-		A28A3F00B8ED43C3852B27C0 /* Release */ = {
+		DD0FAC3B0F8D489BB8B4D790 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -370,20 +370,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		72D19E015316468D8D6640FB /* Build configuration list for PBXProject "RickyApp" */ = {
+		4C255F45FD204836A8884BF2 /* Build configuration list for PBXProject "RickyApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				642BC43CB0A847A7BCDEFA9B /* Debug */,
-				456F434E1B66412BA7C1F82B /* Release */,
+				EDA8209BB70A44048543E85F /* Debug */,
+				166E11E1E32843309CFE9D27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C2574EC81B04814AFA1F89F /* Build configuration list for PBXNativeTarget "RickyApp" */ = {
+		F0617BACFD3A4254A5FD1BE2 /* Build configuration list for PBXNativeTarget "RickyApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C02AACEAB4A8499995A0AC8E /* Debug */,
-				A28A3F00B8ED43C3852B27C0 /* Release */,
+				58332397B63941829558F3BB /* Debug */,
+				DD0FAC3B0F8D489BB8B4D790 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -391,73 +391,73 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		DFD6EED5A308406BB6CDB1B0 /* XCLocalSwiftPackageReference "RickyDesignSystem" */ = {
+		675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyDesignSystem;
 		};
-		0ACD3FAE351D4D6F80B2313B /* XCLocalSwiftPackageReference "RickyDomain" */ = {
+		519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyDomain;
 		};
-		DCCA6056C8764C589F51680B /* XCLocalSwiftPackageReference "RickyData" */ = {
+		1DD9F14D52B84AB2B664793D /* XCLocalSwiftPackageReference "RickyData" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyData;
 		};
-		690FB03D9C7F44418AAA590A /* XCLocalSwiftPackageReference "RickyRouter" */ = {
+		FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyRouter;
 		};
-		F0E3898275C84B5C96933A9C /* XCLocalSwiftPackageReference "RickyDI" */ = {
+		2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyDI;
 		};
-		693C5A44163E4D4AB58D4FD2 /* XCLocalSwiftPackageReference "RickyAppCore" */ = {
+		40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyAppCore;
 		};
-		F05C92733A994B1394D9A6F9 /* XCLocalSwiftPackageReference "RickyConfiguration" */ = {
+		2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyConfiguration;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FD89B42DE54745379963594A /* RickyDesignSystem */ = {
+		F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DFD6EED5A308406BB6CDB1B0 /* XCLocalSwiftPackageReference "RickyDesignSystem" */;
+			package = 675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */;
 			productName = RickyDesignSystem;
 		};
-		B02D665400724FECBAB355F6 /* RickyDomain */ = {
+		8857BFE00ECA47F38B646DEF /* RickyDomain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0ACD3FAE351D4D6F80B2313B /* XCLocalSwiftPackageReference "RickyDomain" */;
+			package = 519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */;
 			productName = RickyDomain;
 		};
-		FAE4C9EDC54A42D482C554EC /* RickyData */ = {
+		8B6AD91F68514138B6DD8EA3 /* RickyData */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DCCA6056C8764C589F51680B /* XCLocalSwiftPackageReference "RickyData" */;
+			package = 1DD9F14D52B84AB2B664793D /* XCLocalSwiftPackageReference "RickyData" */;
 			productName = RickyData;
 		};
-		C9B962C1367D4984BE3D2E42 /* RickyRouter */ = {
+		6A1F2E4D59074669B52A7939 /* RickyRouter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 690FB03D9C7F44418AAA590A /* XCLocalSwiftPackageReference "RickyRouter" */;
+			package = FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */;
 			productName = RickyRouter;
 		};
-		65594797D1CB4AB6A614A052 /* RickyDI */ = {
+		E435CC9D2CDA49C2B2EFC623 /* RickyDI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F0E3898275C84B5C96933A9C /* XCLocalSwiftPackageReference "RickyDI" */;
+			package = 2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */;
 			productName = RickyDI;
 		};
-		6F2D540633DC4BC3A4AF603F /* RickyAppCore */ = {
+		CF61157C62C8476495FE08CE /* RickyAppCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 693C5A44163E4D4AB58D4FD2 /* XCLocalSwiftPackageReference "RickyAppCore" */;
+			package = 40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */;
 			productName = RickyAppCore;
 		};
-		C8FFC43A91544E4B9727F24E /* RickyConfiguration */ = {
+		C047B539EF66429DA331C59F /* RickyConfiguration */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F05C92733A994B1394D9A6F9 /* XCLocalSwiftPackageReference "RickyConfiguration" */;
+			package = 2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */;
 			productName = RickyConfiguration;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 95EBE3C9E4CD4DF4B4769BFD /* Project object */;
+	rootObject = 0EDD4C924A13426E99B1F617 /* Project object */;
 }

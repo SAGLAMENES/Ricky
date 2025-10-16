@@ -2,42 +2,39 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Package.swift">
+      location = "group:RickyApp.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:RickyApp/RickyApp">
+      location = "group:RickyAppCore">
    </FileRef>
    <FileRef
-      location = "group:RickyAppCore/Package.swift">
+      location = "group:RickyConfiguration">
    </FileRef>
    <FileRef
-      location = "group:RickyConfiguration/Package.swift">
+      location = "group:RickyDI">
    </FileRef>
    <FileRef
-      location = "group:RickyDI/Package.swift">
+      location = "group:RickyData">
    </FileRef>
    <FileRef
-      location = "group:RickyData/Package.swift">
+      location = "group:RickyDesignSystem">
    </FileRef>
    <FileRef
-      location = "group:RickyDesignSystem/Package.swift">
+      location = "group:RickyDomain">
    </FileRef>
    <FileRef
-      location = "group:RickyDomain/Package.swift">
+      location = "group:RickyModel">
    </FileRef>
    <FileRef
-      location = "group:RickyModel/Package.swift">
+      location = "group:RickyNetwork">
    </FileRef>
    <FileRef
-      location = "group:RickyNetwork/Package.swift">
+      location = "group:RickyNetworkInterface">
    </FileRef>
    <FileRef
-      location = "group:RickyNetworkInterface/Package.swift">
+      location = "group:RickyPersistance">
    </FileRef>
    <FileRef
-      location = "group:RickyPersistance/Package.swift">
-   </FileRef>
-   <FileRef
-      location = "group:RickyRouter/Package.swift">
+      location = "group:RickyRouter">
    </FileRef>
 </Workspace>

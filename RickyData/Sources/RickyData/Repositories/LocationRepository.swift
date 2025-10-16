@@ -88,8 +88,6 @@ public final class LocationRepository: LocationRepositoryProtocol {
     }
 
     public func fetchLocation(by id: Int) -> AnyPublisher<LocationEntity, DomainError> {
-        let cacheKey = CacheKey.location(id: id)
-
         // Check memory cache
         if let cachedList = memoryCache.get(for: "all_locations"),
            let cached = cachedList.first(where: { $0.id == id }),

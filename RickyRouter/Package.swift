@@ -5,7 +5,7 @@ let package = Package(
     name: "RickyRouter",
     platforms: [
         .iOS(.v15),
-        .macOS(.v12)
+        .macOS(.v13)
     ],
     products: [
         .library(

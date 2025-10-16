@@ -7,9 +7,6 @@
 
 import Foundation
 
-
-import Foundation
-
 public struct CharacterResponse: Codable {
     public let info: Info
     public let results: [Character]

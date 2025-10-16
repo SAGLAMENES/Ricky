@@ -16,9 +16,3 @@ public protocol CharacterRepositoryProtocol {
     func toggleFavorite(characterId: Int) -> AnyPublisher<Bool, DomainError>
     func isFavorite(characterId: Int) -> AnyPublisher<Bool, DomainError>
 }
-
-public protocol LocationRepositoryProtocol {
-    func fetchLocations(page: Int) -> AnyPublisher<[LocationEntity], DomainError>
-    func fetchLocation(by id: Int) -> AnyPublisher<LocationEntity, DomainError>
-    func searchLocations(name: String, type: String?, dimension: String?, page: Int) -> AnyPublisher<[LocationEntity], DomainError>
-}

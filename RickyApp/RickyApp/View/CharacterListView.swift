@@ -9,17 +9,19 @@
 import SwiftUI
 import RickyDesignSystem
 import RickyDomain
+import RickyRouter
 
 struct CharacterListView: View {
     @StateObject private var viewModel = CharacterListViewModel()
+    @StateObject private var router = RouterService.shared
 
     var body: some View {
         if #available(iOS 16.0, *) {
-            NavigationStack {
+            NavigationStack(path: $router.path) {
                 contentView
                     .navigationTitle("Rick & Morty")
-                    .navigationDestination(for: CharacterEntity.self) { character in
-                        CharacterDetailView(character: character)
+                    .navigationDestination(for: Route.self) { route in
+                        routeDestination(for: route)
                     }
                     .searchable(text: $viewModel.searchQuery, prompt: "Search characters")
                     .onAppear {
@@ -28,6 +30,7 @@ struct CharacterListView: View {
                         }
                     }
             }
+            .environmentObject(router)
         } else {
             NavigationView {
                 contentView
@@ -39,6 +42,24 @@ struct CharacterListView: View {
                         }
                     }
             }
+            .environmentObject(router)
+        }
+    }
+
+    @ViewBuilder
+    private func routeDestination(for route: Route) -> some View {
+        switch route {
+        case .characterList:
+            EmptyView() // Root, never pushed
+
+        case .characterDetail(let character):
+            CharacterDetailView(character: character)
+
+        case .locationList:
+            LocationListView()
+
+        case .locationDetail(let location):
+            LocationDetailView(location: location)
         }
     }
 
@@ -62,12 +83,13 @@ struct CharacterListView: View {
 
 struct CharacterList: View {
     @ObservedObject var viewModel: CharacterListViewModel
+    @EnvironmentObject private var router: RouterService
 
     var body: some View {
         List {
             ForEach(viewModel.characters, id: \.id) { character in
                 if #available(iOS 16.0, *) {
-                    NavigationLink(value: character) {
+                    NavigationLink(value: Route.characterDetail(character)) {
                         CharacterRow(character: character) {
                             viewModel.toggleFavorite(characterId: character.id)
                         }

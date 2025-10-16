@@ -37,6 +37,7 @@ public final class ServiceContainer: @unchecked Sendable {
     public let fetchCharactersUseCase: Factory<FetchCharactersUseCase>
     public let searchCharactersUseCase: Factory<SearchCharactersUseCase>
     public let toggleFavoriteUseCase: Factory<ToggleFavoriteUseCase>
+    public let fetchLocationsUseCase: Factory<FetchLocationsUseCase>
 
     // MARK: - Initialization
 
@@ -80,6 +81,12 @@ public final class ServiceContainer: @unchecked Sendable {
         self.toggleFavoriteUseCase = Factory {
             ToggleFavoriteUseCase(
                 characterRepository: ServiceContainer.shared.characterRepository.resolve()
+            )
+        }
+
+        self.fetchLocationsUseCase = Factory {
+            FetchLocationsUseCase(
+                repository: ServiceContainer.shared.locationRepository.resolve()
             )
         }
     }

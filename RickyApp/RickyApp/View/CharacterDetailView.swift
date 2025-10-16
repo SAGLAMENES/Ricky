@@ -8,10 +8,12 @@
 import SwiftUI
 import RickyDesignSystem
 import RickyDomain
+import RickyRouter
 
 struct CharacterDetailView: View {
     let character: CharacterEntity
     @Environment(\.dismiss) private var dismiss
+    @EnvironmentObject private var router: RouterService
     @State private var isFavorite: Bool
 
     init(character: CharacterEntity) {
@@ -127,6 +129,32 @@ struct CharacterDetailView: View {
                         )
                         .padding(.horizontal)
                     }
+
+                    // Explore Locations Button
+                    Button(action: {
+                        router.navigate(to: .locationList)
+                    }) {
+                        HStack {
+                            Image(systemName: "map")
+                                .font(.title3)
+                            Text("Explore All Locations")
+                                .font(.headline)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                        }
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            LinearGradient(
+                                colors: [.blue, .purple],
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .cornerRadius(12)
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 8)
                 }
                 .padding(.bottom, 32)
             }
@@ -232,6 +260,7 @@ struct InfoCard: View {
                     isFavorite: false
                 )
             )
+            .environmentObject(RouterService.shared)
         }
     } else {
         NavigationView {
@@ -252,6 +281,7 @@ struct InfoCard: View {
                     isFavorite: false
                 )
             )
+            .environmentObject(RouterService.shared)
         }
     }
 }

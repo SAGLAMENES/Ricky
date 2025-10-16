@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyApp/RickyApp">
+   </FileRef>
+   <FileRef
+      location = "group:RickyAppCore/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyConfiguration/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyDI/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyData/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyDesignSystem/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyDomain/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyModel/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyNetwork/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyNetworkInterface/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyPersistance/Package.swift">
+   </FileRef>
+   <FileRef
+      location = "group:RickyRouter/Package.swift">
+   </FileRef>
+</Workspace>

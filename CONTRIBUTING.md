@@ -677,6 +677,5 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 ---
 
-Thank you for contributing to Ricky! 🙌
+Thank you for contributing to Ricky! 
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)

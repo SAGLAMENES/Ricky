@@ -367,5 +367,4 @@ The codebase is now:
 
 ---
 
-**Generated with Claude Code**
 Created by Burak Arslan on 14.10.2025

@@ -906,4 +906,3 @@ This architecture provides:
 **Architecture Pattern:** Clean Architecture + MVVM
 **Language:** Swift 6.0
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)

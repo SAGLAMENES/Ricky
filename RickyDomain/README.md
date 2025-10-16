@@ -441,4 +441,3 @@ See also:
 - [RickyApp](../RickyApp/README.md) - Presentation layer
 - [Architecture Guide](../docs/ARCHITECTURE.md)
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)

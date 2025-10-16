@@ -238,4 +238,3 @@ final class CharacterRepositoryTests: XCTestCase {
 
 ---
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)

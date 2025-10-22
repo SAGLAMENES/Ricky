@@ -25,7 +25,11 @@ let package = Package(
             name: "RickyPersistance",
             dependencies: [
                 .product(name: "RickyModel", package: "RickyModel")
-            ]),
+            ],
+            resources: [
+                .process("Resources/RickyFavorites.xcdatamodeld")
+            ]
+        ),
         .testTarget(
             name: "RickyPersistanceTests",
             dependencies: ["RickyPersistance"]

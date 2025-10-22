@@ -12,6 +12,43 @@ import RickyDomain
 /// Maps between Character model and CharacterEntity
 public struct CharacterMapper {
 
+    // MARK: - Domain → DTO (Entity → Character)
+
+    /// Converts CharacterEntity (domain entity) to Character (API model/DTO)
+    /// - Parameter entity: The domain entity
+    /// - Returns: The corresponding API model
+    public static func toDTO(_ entity: CharacterEntity) -> Character {
+        Character(
+            id: entity.id,
+            name: entity.name,
+            status: entity.status.rawValue,
+            species: entity.species,
+            type: entity.type,
+            gender: entity.gender.rawValue,
+            origin: Location(
+                name: entity.origin.name,
+                url: entity.origin.url?.absoluteString ?? ""
+            ),
+            location: Location(
+                name: entity.location.name,
+                url: entity.location.url?.absoluteString ?? ""
+            ),
+            image: entity.imageURL?.absoluteString ?? "",
+            episode: entity.episodeURLs.map { $0.absoluteString },
+            url: entity.profileURL?.absoluteString ?? "",
+            created: formatDate(entity.createdDate)
+        )
+    }
+
+    /// Converts multiple domain entities to DTOs
+    /// - Parameter entities: Array of domain entities
+    /// - Returns: Array of API models
+    public static func toDTO(_ entities: [CharacterEntity]) -> [Character] {
+        entities.map { toDTO($0) }
+    }
+
+    // MARK: - DTO → Domain (Character → Entity)
+
     /// Converts Character (API model) to CharacterEntity (domain entity)
     /// - Parameters:
     ///   - character: The API model character
@@ -63,5 +100,10 @@ public struct CharacterMapper {
     private static func parseDate(_ dateString: String) -> Date? {
         let formatter = ISO8601DateFormatter()
         return formatter.date(from: dateString)
+    }
+
+    private static func formatDate(_ date: Date) -> String {
+        let formatter = ISO8601DateFormatter()
+        return formatter.string(from: date)
     }
 }

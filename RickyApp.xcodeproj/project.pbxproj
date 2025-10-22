@@ -7,36 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B59AFA9AA8FB4725A3690296 /* RickyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F54D70EA34B36B4D79449 /* RickyAppApp.swift */; };
-		A727B895FF0B488FAB32F7B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9933D0244A8FBC8A083B /* ContentView.swift */; };
 		05FF9B9007B444B8A4D2A93B /* CharacterListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */; };
 		6148D6E9AE5E472D8F8B250F /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */; };
-		CAE7B59E376C4DD0B3D5C83F /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1368F7B1724717866438D8 /* CharacterListView.swift */; };
-		E07635ED98E04F0A89693234 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */; };
 		7B36880850AE43A0B0C89D64 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */; };
+		A727B895FF0B488FAB32F7B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC9933D0244A8FBC8A083B /* ContentView.swift */; };
+		B59AFA9AA8FB4725A3690296 /* RickyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F54D70EA34B36B4D79449 /* RickyAppApp.swift */; };
+		BCDC1B182EA8D22100672E49 /* RickyDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */; };
+		BCDC1B192EA8D22100672E49 /* RickyDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8857BFE00ECA47F38B646DEF /* RickyDomain */; };
+		BCDC1B1A2EA8D22100672E49 /* RickyData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6AD91F68514138B6DD8EA3 /* RickyData */; };
+		BCDC1B1B2EA8D22100672E49 /* RickyRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 6A1F2E4D59074669B52A7939 /* RickyRouter */; };
+		BCDC1B1C2EA8D22100672E49 /* RickyDI in Frameworks */ = {isa = PBXBuildFile; productRef = E435CC9D2CDA49C2B2EFC623 /* RickyDI */; };
+		BCDC1B1D2EA8D22100672E49 /* RickyAppCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF61157C62C8476495FE08CE /* RickyAppCore */; };
+		BCDC1B1E2EA8D22100672E49 /* RickyConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = C047B539EF66429DA331C59F /* RickyConfiguration */; };
+		BCDC1B202EA8D34800672E49 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC1B1F2EA8D34800672E49 /* FavoritesView.swift */; };
+		BCDC1B222EA8D35300672E49 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCDC1B212EA8D35300672E49 /* FavoritesViewModel.swift */; };
 		BEB8E81491584AD697E1B01C /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CBBF0192AC4D198D30463F /* LocationDetailView.swift */; };
+		CAE7B59E376C4DD0B3D5C83F /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1368F7B1724717866438D8 /* CharacterListView.swift */; };
 		DEFD19A3BB7947C7BE918AAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0BF6063A8E91471AA5F1730D /* Assets.xcassets */; };
-		5455258386034D8BB80BAFD8 /* RickyDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */; };
-		EE786026506941E595CF7DFD /* RickyDomain in Frameworks */ = {isa = PBXBuildFile; productRef = 8857BFE00ECA47F38B646DEF /* RickyDomain */; };
-		781C3D9E257746BB937422D0 /* RickyData in Frameworks */ = {isa = PBXBuildFile; productRef = 8B6AD91F68514138B6DD8EA3 /* RickyData */; };
-		25EEF86336884259822677BC /* RickyRouter in Frameworks */ = {isa = PBXBuildFile; productRef = 6A1F2E4D59074669B52A7939 /* RickyRouter */; };
-		91DCEC753A464E40A002E378 /* RickyDI in Frameworks */ = {isa = PBXBuildFile; productRef = E435CC9D2CDA49C2B2EFC623 /* RickyDI */; };
-		D3F218B5063848E99B36E849 /* RickyAppCore in Frameworks */ = {isa = PBXBuildFile; productRef = CF61157C62C8476495FE08CE /* RickyAppCore */; };
-		897393826C854A0DAB4117E0 /* RickyConfiguration in Frameworks */ = {isa = PBXBuildFile; productRef = C047B539EF66429DA331C59F /* RickyConfiguration */; };
+		E07635ED98E04F0A89693234 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		97E2C035D69F46EBBFBDCB8E /* RickyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		309F54D70EA34B36B4D79449 /* RickyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickyAppApp.swift; sourceTree = "<group>"; };
-		01FC9933D0244A8FBC8A083B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
-		B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
-		9B1368F7B1724717866438D8 /* CharacterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
 		00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
-		A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
-		69CBBF0192AC4D198D30463F /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		01FC9933D0244A8FBC8A083B /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0BF6063A8E91471AA5F1730D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		309F54D70EA34B36B4D79449 /* RickyAppApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RickyAppApp.swift; sourceTree = "<group>"; };
+		464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListViewModel.swift; sourceTree = "<group>"; };
+		69CBBF0192AC4D198D30463F /* LocationDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 		6CFE54E955CC4F7F8030C5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97E2C035D69F46EBBFBDCB8E /* RickyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B1368F7B1724717866438D8 /* CharacterListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
+		A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		BCDC1B1F2EA8D34800672E49 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		BCDC1B212EA8D35300672E49 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		C23C05E39DEA4BF98131820E /* RickyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RickyApp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,13 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDC1B1E2EA8D22100672E49 /* RickyConfiguration in Frameworks */,
+				BCDC1B1D2EA8D22100672E49 /* RickyAppCore in Frameworks */,
+				BCDC1B1C2EA8D22100672E49 /* RickyDI in Frameworks */,
+				BCDC1B1B2EA8D22100672E49 /* RickyRouter in Frameworks */,
+				BCDC1B1A2EA8D22100672E49 /* RickyData in Frameworks */,
+				BCDC1B192EA8D22100672E49 /* RickyDomain in Frameworks */,
+				BCDC1B182EA8D22100672E49 /* RickyDesignSystem in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F392CC54449A4093B4791A1C = {
+		5746371000724B13AC74C9EA /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				BCDC1B212EA8D35300672E49 /* FavoritesViewModel.swift */,
+				464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */,
+				B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		E9580046487548B6B01DF2A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				97E2C035D69F46EBBFBDCB8E /* RickyApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F392CC54449A4093B4791A1C /* RickyApp/RickyApp */ = {
 			isa = PBXGroup;
 			children = (
 				309F54D70EA34B36B4D79449 /* RickyAppApp.swift */,
@@ -66,26 +95,10 @@
 			path = RickyApp/RickyApp;
 			sourceTree = "<group>";
 		};
-		E9580046487548B6B01DF2A7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				97E2C035D69F46EBBFBDCB8E /* RickyApp.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5746371000724B13AC74C9EA /* VM */ = {
-			isa = PBXGroup;
-			children = (
-				464467A11E4E4CC7B39FE357 /* CharacterListViewModel.swift */,
-				B1EB27D59ECE40E599922575 /* LocationListViewModel.swift */,
-			);
-			path = VM;
-			sourceTree = "<group>";
-		};
 		F65966DB79A047299AD364D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BCDC1B1F2EA8D34800672E49 /* FavoritesView.swift */,
 				9B1368F7B1724717866438D8 /* CharacterListView.swift */,
 				00563F74BFFA44AB9071A216 /* CharacterDetailView.swift */,
 				A5ECA5B8D0FE4BE5BE41EA2C /* LocationListView.swift */,
@@ -141,7 +154,7 @@
 				en,
 				Base,
 			);
-			mainGroup = F392CC54449A4093B4791A1C;
+			mainGroup = F392CC54449A4093B4791A1C /* RickyApp/RickyApp */;
 			packageReferences = (
 				675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */,
 				519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */,
@@ -176,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDC1B222EA8D35300672E49 /* FavoritesViewModel.swift in Sources */,
 				B59AFA9AA8FB4725A3690296 /* RickyAppApp.swift in Sources */,
 				A727B895FF0B488FAB32F7B5 /* ContentView.swift in Sources */,
 				05FF9B9007B444B8A4D2A93B /* CharacterListViewModel.swift in Sources */,
@@ -184,73 +198,13 @@
 				E07635ED98E04F0A89693234 /* CharacterDetailView.swift in Sources */,
 				7B36880850AE43A0B0C89D64 /* LocationListView.swift in Sources */,
 				BEB8E81491584AD697E1B01C /* LocationDetailView.swift in Sources */,
+				BCDC1B202EA8D34800672E49 /* FavoritesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		EDA8209BB70A44048543E85F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu17;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
-				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-			};
-			name = Debug;
-		};
 		166E11E1E32843309CFE9D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,7 +276,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.burakarslan.RickyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,7 +310,10 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.burakarslan.RickyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -366,6 +326,67 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		EDA8209BB70A44048543E85F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -391,41 +412,41 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = RickyDesignSystem;
-		};
-		519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = RickyDomain;
-		};
 		1DD9F14D52B84AB2B664793D /* XCLocalSwiftPackageReference "RickyData" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyData;
-		};
-		FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = RickyRouter;
 		};
 		2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyDI;
 		};
-		40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = RickyAppCore;
-		};
 		2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = RickyConfiguration;
 		};
+		40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RickyAppCore;
+		};
+		519104EB45CB4A7493794BC1 /* XCLocalSwiftPackageReference "RickyDomain" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RickyDomain;
+		};
+		675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RickyDesignSystem;
+		};
+		FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = RickyRouter;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */ = {
+		6A1F2E4D59074669B52A7939 /* RickyRouter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */;
-			productName = RickyDesignSystem;
+			package = FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */;
+			productName = RickyRouter;
 		};
 		8857BFE00ECA47F38B646DEF /* RickyDomain */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -437,25 +458,25 @@
 			package = 1DD9F14D52B84AB2B664793D /* XCLocalSwiftPackageReference "RickyData" */;
 			productName = RickyData;
 		};
-		6A1F2E4D59074669B52A7939 /* RickyRouter */ = {
+		C047B539EF66429DA331C59F /* RickyConfiguration */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FF963FE79CD84BAE9EE68958 /* XCLocalSwiftPackageReference "RickyRouter" */;
-			productName = RickyRouter;
-		};
-		E435CC9D2CDA49C2B2EFC623 /* RickyDI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */;
-			productName = RickyDI;
+			package = 2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */;
+			productName = RickyConfiguration;
 		};
 		CF61157C62C8476495FE08CE /* RickyAppCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 40C769168FEC45408C0798BA /* XCLocalSwiftPackageReference "RickyAppCore" */;
 			productName = RickyAppCore;
 		};
-		C047B539EF66429DA331C59F /* RickyConfiguration */ = {
+		E435CC9D2CDA49C2B2EFC623 /* RickyDI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2FC88F2BA5AC4130AD2A8D03 /* XCLocalSwiftPackageReference "RickyConfiguration" */;
-			productName = RickyConfiguration;
+			package = 2699584AC6D844BEBA9FCC61 /* XCLocalSwiftPackageReference "RickyDI" */;
+			productName = RickyDI;
+		};
+		F4FD90E7A52E4847BDCA9001 /* RickyDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 675F51F2B40B44B9AA59C806 /* XCLocalSwiftPackageReference "RickyDesignSystem" */;
+			productName = RickyDesignSystem;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

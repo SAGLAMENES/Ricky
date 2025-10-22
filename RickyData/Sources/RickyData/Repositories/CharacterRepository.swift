@@ -227,13 +227,14 @@ public final class CharacterRepository: CharacterRepositoryProtocol {
     }
 
     public func toggleFavorite(characterId: Int) -> AnyPublisher<Bool, DomainError> {
-        // Fetch the character from favorites or network
+        // Check if character is already in favorites
         let favoriteCharacter = favoritesRepository.favorites.first { $0.id == characterId }
 
         if let character = favoriteCharacter {
             // Character is in favorites, remove it
             favoritesRepository.toggleFavorite(character)
             memoryCache.clear()
+            
             return Just(false)
                 .setFailureType(to: DomainError.self)
                 .eraseToAnyPublisher()
@@ -243,10 +244,15 @@ public final class CharacterRepository: CharacterRepositoryProtocol {
                 .tryMap { [weak self] (entity: CharacterEntity) throws -> Bool in
                     guard let self = self else { throw DomainError.unknownError }
 
-                    // Find the character in the cache or fetch from network
-                    // For now, we'll just return true as we can't easily convert back
-                    // In a real app, you'd want to store the raw Character model alongside the entity
+                    // Convert entity to DTO for storage
+                    let character = CharacterMapper.toDTO(entity)
+                    
+                    // Add to favorites
+                    self.favoritesRepository.toggleFavorite(character)
+                    
+                    // Clear memory cache to refresh favorite status in UI
                     self.memoryCache.clear()
+                    
                     return true
                 }
                 .mapError { error in

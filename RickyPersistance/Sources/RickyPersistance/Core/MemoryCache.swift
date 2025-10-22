@@ -177,10 +177,6 @@ public final class MemoryCache<Key: Hashable, Value> {
         if halfCount > 0 {
             evictLRU(keepCount: halfCount)
         }
-
-        #if DEBUG
-        print("⚠️ Memory warning: Cleared \(cache.count - halfCount) cache entries")
-        #endif
     }
 }
 

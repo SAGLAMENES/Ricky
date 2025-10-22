@@ -11,6 +11,7 @@ import Combine
 import RickyDI
 import RickyDomain
 import RickyAppCore
+import RickyPersistance
 
 /// ViewModel for character list screen
 /// Follows Clean Architecture by using Use Cases from Domain layer
@@ -29,6 +30,7 @@ final class CharacterListViewModel: ObservableObject {
     private let fetchCharactersUseCase: FetchCharactersUseCase
     private let searchCharactersUseCase: SearchCharactersUseCase
     private let toggleFavoriteUseCase: ToggleFavoriteUseCase
+    private let favoritesRepository: FavoritesRepository
     let networkMonitor = NetworkMonitor.shared
 
     // MARK: - Private Properties
@@ -42,13 +44,16 @@ final class CharacterListViewModel: ObservableObject {
     init(
         fetchCharactersUseCase: FetchCharactersUseCase = ServiceContainer.shared.fetchCharactersUseCase.resolve(),
         searchCharactersUseCase: SearchCharactersUseCase = ServiceContainer.shared.searchCharactersUseCase.resolve(),
-        toggleFavoriteUseCase: ToggleFavoriteUseCase = ServiceContainer.shared.toggleFavoriteUseCase.resolve()
+        toggleFavoriteUseCase: ToggleFavoriteUseCase = ServiceContainer.shared.toggleFavoriteUseCase.resolve(),
+        favoritesRepository: FavoritesRepository = ServiceContainer.shared.favoritesRepository.resolve()
     ) {
         self.fetchCharactersUseCase = fetchCharactersUseCase
         self.searchCharactersUseCase = searchCharactersUseCase
         self.toggleFavoriteUseCase = toggleFavoriteUseCase
+        self.favoritesRepository = favoritesRepository
 
         setupSearchDebouncing()
+        setupFavoritesObserver()
     }
 
     // MARK: - Setup
@@ -61,6 +66,29 @@ final class CharacterListViewModel: ObservableObject {
                 self?.performSearch(query: query)
             }
             .store(in: &cancellables)
+    }
+    
+    private func setupFavoritesObserver() {
+        favoritesRepository.$favorites
+            .map { favorites in
+                Set(favorites.map { $0.id })
+            }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] favoriteIds in
+                self?.updateFavoriteStates(with: favoriteIds)
+            }
+            .store(in: &cancellables)
+    }
+    
+    private func updateFavoriteStates(with favoriteIds: Set<Int>) {
+        for index in characters.indices {
+            let currentCharacter = characters[index]
+            let shouldBeFavorite = favoriteIds.contains(currentCharacter.id)
+            
+            if currentCharacter.isFavorite != shouldBeFavorite {
+                characters[index] = currentCharacter.withFavorite(shouldBeFavorite)
+            }
+        }
     }
 
     // MARK: - Public Methods

@@ -6,18 +6,28 @@
 //
 
 import SwiftUI
+import Combine
 import RickyDesignSystem
 import RickyDomain
 import RickyRouter
+import RickyDI
 
 struct CharacterDetailView: View {
     let character: CharacterEntity
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject private var router: RouterService
     @State private var isFavorite: Bool
+    @State private var isTogglingFavorite: Bool = false
+    
+    private let toggleFavoriteUseCase: ToggleFavoriteUseCase
+    private var cancellables = Set<AnyCancellable>()
 
-    init(character: CharacterEntity) {
+    init(
+        character: CharacterEntity,
+        toggleFavoriteUseCase: ToggleFavoriteUseCase = ServiceContainer.shared.toggleFavoriteUseCase.resolve()
+    ) {
         self.character = character
+        self.toggleFavoriteUseCase = toggleFavoriteUseCase
         _isFavorite = State(initialValue: character.isFavorite)
     }
 
@@ -35,20 +45,7 @@ struct CharacterDetailView: View {
                     }
                     .frame(height: 400)
                     .clipped()
-
-                    // Favorite button overlay
-                    Button(action: toggleFavorite) {
-                        Image(systemName: isFavorite ? "heart.fill" : "heart")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding(12)
-                            .background(
-                                Circle()
-                                    .fill(.ultraThinMaterial)
-                            )
-                            .shadow(radius: 4)
-                    }
-                    .padding()
+          
                 }
 
                 // Character Info
@@ -163,6 +160,13 @@ struct CharacterDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: toggleFavorite) {
+                    Image(systemName: isFavorite ? "heart.fill" : "heart")
+                        .foregroundStyle(isFavorite ? .red : .white)
+                }
+            }
+
+            ToolbarItem(placement: .navigationBarTrailing) {
                 Button(action: shareCharacter) {
                     Image(systemName: "square.and.arrow.up")
                 }
@@ -181,11 +185,35 @@ struct CharacterDetailView: View {
     }
 
     private func toggleFavorite() {
+        guard !isTogglingFavorite else { return }
+        
         withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
             isFavorite.toggle()
         }
-        // Note: Actual favorite toggle should be handled by ViewModel
-        // This is just for UI feedback
+        
+        let oldFavoriteState = !isFavorite
+        isTogglingFavorite = true
+        
+        let parameters = ToggleFavoriteParameters(characterId: character.id)
+        var cancellable: AnyCancellable?
+        
+        cancellable = toggleFavoriteUseCase
+            .execute(parameters: parameters)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                isTogglingFavorite = false
+                
+                if case let .failure(_) = completion {
+                    withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                        isFavorite = oldFavoriteState
+                    }
+                }
+                cancellable?.cancel()
+            } receiveValue: { newFavoriteStatus in
+                withAnimation(.spring(response: 0.3, dampingFraction: 0.6)) {
+                    isFavorite = newFavoriteStatus
+                }
+            }
     }
 
     private func shareCharacter() {

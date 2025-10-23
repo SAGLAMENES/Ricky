@@ -12,6 +12,7 @@ import RickyDI
 import RickyDomain
 import RickyAppCore
 import RickyPersistance
+import RickyAnalytics
 
 /// ViewModel for character list screen
 /// Follows Clean Architecture by using Use Cases from Domain layer
@@ -31,6 +32,7 @@ final class CharacterListViewModel: ObservableObject {
     private let searchCharactersUseCase: SearchCharactersUseCase
     private let toggleFavoriteUseCase: ToggleFavoriteUseCase
     private let favoritesRepository: FavoritesRepository
+    private let analyticsService: AnalyticsServiceProtocol
     let networkMonitor = NetworkMonitor.shared
 
     // MARK: - Private Properties
@@ -45,15 +47,19 @@ final class CharacterListViewModel: ObservableObject {
         fetchCharactersUseCase: FetchCharactersUseCase = ServiceContainer.shared.fetchCharactersUseCase.resolve(),
         searchCharactersUseCase: SearchCharactersUseCase = ServiceContainer.shared.searchCharactersUseCase.resolve(),
         toggleFavoriteUseCase: ToggleFavoriteUseCase = ServiceContainer.shared.toggleFavoriteUseCase.resolve(),
-        favoritesRepository: FavoritesRepository = ServiceContainer.shared.favoritesRepository.resolve()
+        favoritesRepository: FavoritesRepository = ServiceContainer.shared.favoritesRepository.resolve(),
+        analyticsService: AnalyticsServiceProtocol = ServiceContainer.shared.analyticsService.resolve()
     ) {
         self.fetchCharactersUseCase = fetchCharactersUseCase
         self.searchCharactersUseCase = searchCharactersUseCase
         self.toggleFavoriteUseCase = toggleFavoriteUseCase
         self.favoritesRepository = favoritesRepository
+        self.analyticsService = analyticsService
 
         setupSearchDebouncing()
         setupFavoritesObserver()
+        
+        analyticsService.logEvent(.screenView(screen: .characterList))
     }
 
     // MARK: - Setup
@@ -181,7 +187,9 @@ final class CharacterListViewModel: ObservableObject {
                     self?.errorMessage = error.errorDescription
                 }
             } receiveValue: { [weak self] entities in
-                self?.characters = entities
+                guard let self = self else { return }
+                self.characters = entities
+                self.analyticsService.logEvent(.characterSearch(query: query, resultsCount: entities.count))
             }
             .store(in: &cancellables)
     }
@@ -212,8 +220,20 @@ final class CharacterListViewModel: ObservableObject {
                     }
                     self?.errorMessage = error.errorDescription
                 }
-            } receiveValue: { _ in
-                // Success - optimistic update already applied
+            } receiveValue: { [weak self] _ in
+                guard let self = self else { return }
+                
+                if newFavoriteStatus {
+                    self.analyticsService.logEvent(.characterAddedToFavorites(
+                        characterId: oldCharacter.id,
+                        characterName: oldCharacter.name
+                    ))
+                } else {
+                    self.analyticsService.logEvent(.characterRemovedFromFavorites(
+                        characterId: oldCharacter.id,
+                        characterName: oldCharacter.name
+                    ))
+                }
             }
             .store(in: &cancellables)
     }

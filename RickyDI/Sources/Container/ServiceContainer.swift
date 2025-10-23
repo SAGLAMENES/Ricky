@@ -12,6 +12,7 @@ import RickyPersistance
 import RickyConfiguration
 import RickyDomain
 import RickyData
+import RickyAnalytics
 
 /// Central dependency injection container for the application
 /// Manages creation and lifecycle of all services, repositories, and use cases
@@ -22,6 +23,7 @@ public final class ServiceContainer: @unchecked Sendable {
 
     public let configuration: Factory<AppConfiguration>
     public let networkClient: Factory<NetworkClient>
+    public let analyticsService: Factory<AnalyticsServiceProtocol>
 
     // MARK: - Persistence
 
@@ -47,6 +49,9 @@ public final class ServiceContainer: @unchecked Sendable {
 
         // Network
         self.networkClient = Factory { NetworkClient() }
+        
+        // Analytics
+        self.analyticsService = Factory { FirebaseAnalyticsService.shared }
 
         // Persistence
         self.favoritesRepository = Factory { FavoritesRepository() }

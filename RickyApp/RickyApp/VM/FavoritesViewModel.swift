@@ -10,6 +10,7 @@ import Combine
 import RickyDI
 import RickyDomain
 import RickyPersistance
+import RickyAnalytics
 
 /// ViewModel for favorites list screen
 /// Follows Clean Architecture by using repositories and domain entities
@@ -27,6 +28,7 @@ final class FavoritesViewModel: ObservableObject {
     
     private let characterRepository: CharacterRepositoryProtocol
     private let favoritesRepository: FavoritesRepository
+    private let analyticsService: AnalyticsServiceProtocol
     
     // MARK: - Private Properties
     
@@ -52,13 +54,17 @@ final class FavoritesViewModel: ObservableObject {
     
     init(
         characterRepository: CharacterRepositoryProtocol = ServiceContainer.shared.characterRepository.resolve(),
-        favoritesRepository: FavoritesRepository = ServiceContainer.shared.favoritesRepository.resolve()
+        favoritesRepository: FavoritesRepository = ServiceContainer.shared.favoritesRepository.resolve(),
+        analyticsService: AnalyticsServiceProtocol = ServiceContainer.shared.analyticsService.resolve()
     ) {
         self.characterRepository = characterRepository
         self.favoritesRepository = favoritesRepository
+        self.analyticsService = analyticsService
         
         setupObservers()
         loadFavorites()
+        
+        analyticsService.logEvent(.screenView(screen: .favorites))
     }
     
     // MARK: - Setup

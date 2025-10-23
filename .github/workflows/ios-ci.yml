@@ -2,22 +2,22 @@ name: iOS CI/CD (Build, Test, TestFlight)
 
 on:
   push:
-    branches: [ "feature/analytics" ]
+    branches: ["feature/analytics"]
   pull_request:
-    branches: [ "feature/analytics" ]
+    branches: ["feature/analytics"]
   workflow_dispatch:
 
 jobs:
-  build-test-archive:
+  build_test_archive:   
     runs-on: macos-14
     env:
-      XCODE_SCHEME: RickyApp                # <-- Shared scheme adın
-      XCODE_WORKSPACE: RickyApp.xcworkspace # <-- Workspace yoksa bu satırı sil
-      # XCODE_PROJECT: RickyApp.xcodeproj   # <-- Workspace yoksa bunu AÇ
+      XCODE_SCHEME: RickyApp                
+      XCODE_WORKSPACE: RickyApp.xcworkspace 
+      
       CONFIGURATION: Release
-      ARCHIVE_PATH: ${{ github.workspace }}/build/App.xcarchive
+      ARCHIVE_PATH: ${{ github.workspace }}/build/RickyApp.xcarchive
       EXPORT_PATH:  ${{ github.workspace }}/build/export
-      IPA_PATH:     ${{ github.workspace }}/build/export/App.ipa
+      IPA_PATH:     ${{ github.workspace }}/build/export/RickyApp.ipa
 
     steps:
       - name: Checkout
@@ -26,13 +26,13 @@ jobs:
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: "15.4" 
+          xcode-version: "15.4"
 
       - name: Import signing certs
         uses: apple-actions/import-codesign-certs@v2
         with:
           p12-file-base64: ${{ secrets.CERT_P12 }}
-          p12-password:    ${{ secrets.CERT_P12_PASSWORD }}
+          p12-password: ${{ secrets.CERT_P12_PASSWORD }}
 
       - name: Install provisioning profile
         run: |
@@ -40,23 +40,17 @@ jobs:
           mkdir -p "$PP"
           echo "${{ secrets.MOBILEPROVISION }}" | base64 --decode > "$PP/appstore.mobileprovision"
 
+     
 
-
-     - name: Resolve SPM
-  run: |
-    if [ -n "${XCODE_WORKSPACE}" ]; then
-      # Şemaları bir listeleyelim (teşhis için)
-      xcodebuild -list -workspace "$XCODE_WORKSPACE"
-      # SPM bağımlılıklarını çöz (workspace + scheme)
-      xcodebuild -resolvePackageDependencies \
-        -workspace "$XCODE_WORKSPACE" \
-        -scheme "$XCODE_SCHEME"
-    else
-      xcodebuild -resolvePackageDependencies \
-        -project "$XCODE_PROJECT" \
-        -scheme "$XCODE_SCHEME"
-    fi
-
+      - name: Resolve SPM
+        run: |
+          if [ -n "${XCODE_WORKSPACE}" ]; then
+            xcodebuild -list -workspace "$XCODE_WORKSPACE"
+            xcodebuild -resolvePackageDependencies -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME"
+          else
+            xcodebuild -list -project "$XCODE_PROJECT"
+            xcodebuild -resolvePackageDependencies -project "$XCODE_PROJECT" -scheme "$XCODE_SCHEME"
+          fi
 
       - name: Tests (iPhone 15)
         run: |

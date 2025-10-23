@@ -12,8 +12,7 @@ jobs:
     runs-on: macos-14
     env:
       XCODE_SCHEME: RickyApp                
-      XCODE_WORKSPACE: RickyApp.xcworkspace 
-      
+      XCODE_PROJECT: RickyApp.xcodeproj
       CONFIGURATION: Release
       ARCHIVE_PATH: ${{ github.workspace }}/build/RickyApp.xcarchive
       EXPORT_PATH:  ${{ github.workspace }}/build/export

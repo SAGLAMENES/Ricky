@@ -10,6 +10,7 @@ A professional iOS application showcasing Clean Architecture principles with the
 - **Use Case Pattern** - Encapsulated business rules
 - **Professional Router** - Type-safe navigation with Coordinator pattern
 - **Dependency Injection** - Decoupled and testable components
+- **Firebase Analytics** - User behavior tracking with custom events
 - **Multi-Tier Caching** - Memory + Disk caching with LRU eviction
 - **Request Deduplication** - Prevents duplicate network requests
 - **Network Monitoring** - Real-time connectivity tracking
@@ -82,6 +83,7 @@ A professional iOS application showcasing Clean Architecture principles with the
 - **RickyPersistance** - Caching layer (Memory + Disk with LRU)
 - **RickyConfiguration** - App configuration & feature flags
 - **RickyDI** - Dependency injection container
+- **RickyAnalytics** - Firebase Analytics integration
 
 ### UI
 - **RickyDesignSystem** - Reusable UI components
@@ -104,14 +106,22 @@ git clone https://github.com/Burak-Arslan/Ricky.git
 cd Ricky
 ```
 
-2. Open the workspace:
+2. **Firebase Setup** (Required for Analytics):
+   - Go to [Firebase Console](https://console.firebase.google.com/)
+   - Create a new project or use existing one
+   - Add an iOS app with bundle ID: `com.burakarslan.RickyApp`
+   - Download `GoogleService-Info.plist`
+   - Place it in `RickyApp/RickyApp/` directory
+   - ⚠️ **DO NOT** commit this file to Git (it's in `.gitignore`)
+
+3. Open the workspace:
 ```bash
 open Ricky.xcworkspace
 ```
 
-3. Select your development team in Signing & Capabilities
+4. Select your development team in Signing & Capabilities
 
-4. Build and run (⌘R)
+5. Build and run (⌘R)
 
 ## 🎯 Key Implementations
 
@@ -247,10 +257,12 @@ Comprehensive documentation available:
 - **Networking**: URLSession + Combine
 - **Caching**: NSCache + FileManager
 - **Dependency Injection**: Custom DI Container
+- **Analytics**: Firebase Analytics
 - **Testing**: XCTest
 
 ## 📈 Recent Updates
 
+- ✅ **Firebase Analytics Integration** - User behavior tracking with custom events
 - ✅ Professional Router module with Coordinator pattern
 - ✅ Type-safe navigation with deep linking support
 - ✅ Location List and Location Detail screens
@@ -273,10 +285,10 @@ Comprehensive documentation available:
 - [ ] Dark mode support
 
 ### Long Term
-- [ ] Analytics integration
 - [ ] Remote configuration
 - [ ] Performance monitoring
 - [ ] A/B testing framework
+- [ ] Advanced analytics dashboards
 
 ## 👨‍💻 Author
 

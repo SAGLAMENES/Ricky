@@ -9,7 +9,7 @@ on:
 
 jobs:
   build_test_archive:   
-    runs-on: macos-14
+    runs-on: macos-15
     env:
       XCODE_SCHEME: RickyApp                
       XCODE_PROJECT: RickyApp.xcodeproj
@@ -25,7 +25,7 @@ jobs:
       - name: Select Xcode
         uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: "16.1"
+          xcode-version: "latest-stable"
 
       - name: Import signing certs
         uses: apple-actions/import-codesign-certs@v2

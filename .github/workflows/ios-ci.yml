@@ -29,24 +29,40 @@ jobs:
           xcodebuild -list -workspace "$XCODE_WORKSPACE"
           xcodebuild -resolvePackageDependencies -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME"
 
-      # SPM paket testleri: test yoksa build'e düşer, böylece exit 1 vermez
-      - name: Run SPM Package Tests (skip if none)
+      # SPM testleri: test yoksa VEYA "no tests found" hatası gelirse swift build'e düş
+      - name: Run SPM Package Tests with fallback
         run: |
           set -e
           for pkg in RickyDomain RickyData RickyRouter; do
             echo "🧪 $pkg"
             cd "$pkg"
-            if [ -d "Tests" ] && find Tests -name '*Tests.swift' -print -quit | grep -q .; then
-              echo "→ Tests found, running swift test"
-              swift test --parallel
+
+            if [ -d "Tests" ]; then
+              set +e
+              OUT=$(swift test --parallel 2>&1)
+              STATUS=$?
+              echo "$OUT"
+              set -e
+
+              if [ $STATUS -ne 0 ]; then
+                if echo "$OUT" | grep -qi "no tests found"; then
+                  echo "→ No tests discovered, falling back to swift build"
+                  swift build
+                else
+                  echo "❌ Tests failed (not a 'no tests found' case)"; exit 1
+                fi
+              else
+                echo "✅ Tests passed in $pkg"
+              fi
             else
-              echo "→ No tests found, running swift build instead"
+              echo "→ No Tests directory, running swift build"
               swift build
             fi
+
             cd - >/dev/null
           done
 
-      # Uygulamayı simülatörde derle (imzasız). Test target'ın yoksa da sorun çıkmaz.
+      # Uygulamayı simülatörde sadece derle (imzasız). Test target yoksa da sorun çıkmaz.
       - name: Xcode Build (Simulator, no signing)
         run: |
           xcodebuild \

@@ -29,7 +29,7 @@ jobs:
           xcodebuild -list -workspace "$XCODE_WORKSPACE"
           xcodebuild -resolvePackageDependencies -workspace "$XCODE_WORKSPACE" -scheme "$XCODE_SCHEME"
 
-      # SPM testleri: test yoksa VEYA "no tests found" hatası gelirse swift build'e düş
+      # SPM testleri: test yoksa veya "no tests found" hatasında build'e düş
       - name: Run SPM Package Tests with fallback
         run: |
           set -e
@@ -62,7 +62,25 @@ jobs:
             cd - >/dev/null
           done
 
-      # Uygulamayı simülatörde sadece derle (imzasız). Test target yoksa da sorun çıkmaz.
+      # 🔧 Dummy Firebase plist: Copy Bundle Resources bu yolu bekliyor
+      - name: Create dummy GoogleService-Info.plist for CI
+        run: |
+          mkdir -p RickyApp/RickyApp
+          cat > RickyApp/RickyApp/GoogleService-Info.plist <<'PLIST'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>API_KEY</key><string>DUMMY_API_KEY</string>
+            <key>GCM_SENDER_ID</key><string>000000000000</string>
+            <key>GOOGLE_APP_ID</key><string>1:000000000000:ios:deadbeefdeadbeef</string>
+            <key>PROJECT_ID</key><string>dummy-project</string>
+            <key>BUNDLE_ID</key><string>com.example.RickyApp</string>
+          </dict>
+          </plist>
+          PLIST
+
+      # Uygulamayı simülatörde derle (imzasız)
       - name: Xcode Build (Simulator, no signing)
         run: |
           xcodebuild \
